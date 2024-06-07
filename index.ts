@@ -236,7 +236,3 @@ function hslToHex(hsl: string) {
     console.log(uiTheme);
   }
   
-//   for (let [key,value] of Object.entries(shadcnThemes)){
-//     let one = `${key}: ${value}`;
-//     console.log(one);
-//   }
