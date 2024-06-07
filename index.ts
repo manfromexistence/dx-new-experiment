@@ -1,5 +1,3 @@
-// console.log("Hello via Bun!");
-// import { argbFromHex, themeFromSourceColor, applyTheme, MaterialDynamicColors } from "./color/typescript/index";
 import {  argbFromHex, themeFromSourceColor, hexFromArgb, MaterialDynamicColors, SchemeContent, Hct  } from "./color/typescript/index";
 
 // First Quest, (hsl to hex) converter.
@@ -225,11 +223,7 @@ function hslToHex(hsl: string) {
     onTertiaryFixed: MaterialDynamicColors.onTertiaryFixed,
     onTertiaryFixedVariant: MaterialDynamicColors.onTertiaryFixedVariant,
   };
-  
-  
-  // console.log(JSON.stringify(shadcnThemes, null, 2));
-  
-  
+      
   let scheme = new SchemeContent(Hct.fromInt(argbFromHex(`${hslToHex("47.9 95.8% 53.1%")}`)), true, 1);
   let theme: { [key: string]: string } = {};
   
@@ -246,3 +240,63 @@ function hslToHex(hsl: string) {
 //     let one = `${key}: ${value}`;
 //     console.log(one);
 //   }
+
+
+
+// {
+//     "primaryPaletteKeyColor": {},
+//     "secondaryPaletteKeyColor": {},
+//     "tertiaryPaletteKeyColor": {},
+//     "neutralPaletteKeyColor": {},
+//     "neutralVariantPaletteKeyColor": {},
+//     "background": {},
+//     "onBackground": {},
+//     "surface": {},
+//     "surfaceDim": {},
+//     "surfaceBright": {},
+//     "surfaceContainerLowest": {},
+//     "surfaceContainerLow": {},
+//     "surfaceContainer": {},
+//     "surfaceContainerHigh": {},
+//     "surfaceContainerHighest": {},
+//     "onSurface": {},
+//     "surfaceVariant": {},
+//     "onSurfaceVariant": {},
+//     "inverseSurface": {},
+//     "inverseOnSurface": {},
+//     "outline": {},
+//     "outlineVariant": {},
+//     "shadow": {},
+//     "scrim": {},
+//     "surfaceTint": {},
+//     "primary": {},
+//     "onPrimary": {},
+//     "primaryContainer": {},
+//     "onPrimaryContainer": {},
+//     "inversePrimary": {},
+//     "secondary": {},
+//     "onSecondary": {},
+//     "secondaryContainer": {},
+//     "onSecondaryContainer": {},
+//     "tertiary": {},
+//     "onTertiary": {},
+//     "tertiaryContainer": {},
+//     "onTertiaryContainer": {},
+//     "error": {},
+//     "onError": {},
+//     "errorContainer": {},
+//     "onErrorContainer": {},
+//     "primaryFixed": {},
+//     "primaryFixedDim": {},
+//     "onPrimaryFixed": {},
+//     "onPrimaryFixedVariant": {},
+//     "secondaryFixed": {},
+//     "secondaryFixedDim": {},
+//     "onSecondaryFixed": {},
+//     "onSecondaryFixedVariant": {},
+//     "tertiaryFixed": {},
+//     "tertiaryFixedDim": {},
+//     "onTertiaryFixed": {},
+//     "onTertiaryFixedVariant": {}
+//   }
+  
