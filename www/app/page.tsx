@@ -23,8 +23,61 @@ export default function Home() {
     "destructive-foreground": "210 20% 98%",
     "border": "215 27.9% 16.9%",
     "input": "215 27.9% 16.9%",
-    "ring": "216 12.2% 83.9%"
+    "ring": "216 12.2% 83.9%",
+
+    "primaryPaletteKeyColor": "225 8% 48%",
+    "secondaryPaletteKeyColor": "231 2% 47%",
+    "tertiaryPaletteKeyColor": "278 52% 4%",
+    "neutralPaletteKeyColor": "300 0% 46%",
+    "neutralVariantPaletteKeyColor": "231 2% 47%",
+    "onBackground": "340 5% 89%",
+    "surface": "240 2% 7%",
+    "surfaceDim": "240 2% 7%",
+    "surfaceBright": "300 0% 31%",
+    "surfaceContainerLowest": "0 0% 0%",
+    "surfaceContainerLow": "300 1% 12%",
+    "surfaceContainer": "300 1% 19%",
+    "surfaceContainerHigh": "300 0% 23%",
+    "surfaceContainerHighest": "300 0% 27%",
+    "onSurface": "0 0% 100%",
+    "surfaceVariant": "223 4% 28%",
+    "onSurfaceVariant": "0 0% 100%",
+    "inverseSurface": "340 5% 89%",
+    "inverseOnSurface": "0 0% 0%",
+    "outline": "249 28% 95%",
+    "outlineVariant": "240 5% 77%",
+    "shadow": "0 0% 0%",
+    "scrim": "0 0% 0%",
+    "surfaceTint": "226 21% 80%",
+    "onPrimary": "0 0% 0%",
+    "primaryContainer": "226 19% 78%",
+    "onPrimaryContainer": "0 0% 0%",
+    "inversePrimary": "221 12% 29%",
+    "onSecondary": "0 0% 0%",
+    "secondaryContainer": "240 6% 77%",
+    "onSecondaryContainer": "0 0% 0%",
+    "tertiary": "294 90% 95%",
+    "onTertiary": "0 0% 0%",
+    "tertiaryContainer": "290 16% 78%",
+    "onTertiaryContainer": "0 0% 0%",
+    "error": "8 100% 95%",
+    "onError": "0 0% 0%",
+    "errorContainer": "7 100% 82%",
+    "onErrorContainer": "0 0% 0%",
+    "primaryFixed": "226 47% 90%",
+    "primaryFixedDim": "226 21% 80%",
+    "onPrimaryFixed": "0 0% 0%",
+    "onPrimaryFixedVariant": "220 45% 7%",
+    "secondaryFixed": "240 13% 89%",
+    "secondaryFixedDim": "240 6% 79%",
+    "onSecondaryFixed": "0 0% 0%",
+    "onSecondaryFixedVariant": "223 18% 7%",
+    "tertiaryFixed": "294 38% 90%",
+    "tertiaryFixedDim": "290 17% 79%",
+    "onTertiaryFixed": "0 0% 0%",
+    "onTertiaryFixedVariant": "280 30% 7%",
   });
+
 
   useEffect(() => {
     for (const key in theme) {
@@ -67,7 +120,7 @@ export default function Home() {
 
       <div className="grid grid-cols-3">
         {theme && Object.entries(theme).map(([key, value]: [any, any]) => (
-          <p key={key} className={`flex-center bg-${key} text-[#00ff44] h-32 w-full border`}><strong>{key}</strong></p>
+          <p key={key} className={`flex-center bg-[hsl(var(--${key}))] text-[#00ff44] h-32 w-full border`}><strong>{key}</strong></p>
         ))}
       </div>
 

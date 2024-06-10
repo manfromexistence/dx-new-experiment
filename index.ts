@@ -173,7 +173,7 @@ const materialColors = {
   tertiaryPaletteKeyColor: MaterialDynamicColors.tertiaryPaletteKeyColor,
   neutralPaletteKeyColor: MaterialDynamicColors.neutralPaletteKeyColor,
   neutralVariantPaletteKeyColor: MaterialDynamicColors.neutralVariantPaletteKeyColor,
-  background: MaterialDynamicColors.background,
+  // background: MaterialDynamicColors.background,
   onBackground: MaterialDynamicColors.onBackground,
   surface: MaterialDynamicColors.surface,
   surfaceDim: MaterialDynamicColors.surfaceDim,
@@ -193,12 +193,12 @@ const materialColors = {
   shadow: MaterialDynamicColors.shadow,
   scrim: MaterialDynamicColors.scrim,
   surfaceTint: MaterialDynamicColors.surfaceTint,
-  primary: MaterialDynamicColors.primary,
+  // primary: MaterialDynamicColors.primary,
   onPrimary: MaterialDynamicColors.onPrimary,
   primaryContainer: MaterialDynamicColors.primaryContainer,
   onPrimaryContainer: MaterialDynamicColors.onPrimaryContainer,
   inversePrimary: MaterialDynamicColors.inversePrimary,
-  secondary: MaterialDynamicColors.secondary,
+  // secondary: MaterialDynamicColors.secondary,
   onSecondary: MaterialDynamicColors.onSecondary,
   secondaryContainer: MaterialDynamicColors.secondaryContainer,
   onSecondaryContainer: MaterialDynamicColors.onSecondaryContainer,
@@ -830,7 +830,7 @@ for (let [key, value] of Object.entries(obj)) {
 // console.log(themeObj);
 
 
-let scheme = new SchemeContent(Hct.fromInt(argbFromHex(`${hslToHex("47.9 95.8% 53.1%")}`)), true, 1);
+let scheme = new SchemeContent(Hct.fromInt(argbFromHex(`${hslToHex("224 71.4% 4.1%")}`)), true, 1);
 let theme: { [key: string]: string } = {};
 
 for (let [key, value] of Object.entries(materialColors)) {
@@ -838,6 +838,6 @@ for (let [key, value] of Object.entries(materialColors)) {
 };
 
 for (let [key, value] of Object.entries(theme)) {
-  let uiTheme = `${key}:"${hexToHsl(value)}",`;
+  let uiTheme = `"${key}":"${hexToHsl(value)}",`;
   console.log(uiTheme);
 }
