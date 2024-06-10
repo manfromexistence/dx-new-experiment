@@ -1,7 +1,5 @@
 # Unused Tailwind css config:
 ```
-
-  
   /* Blurs */
   /* --blur-*: initial; */
   /* --blur-sm: 4px;
