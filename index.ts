@@ -830,7 +830,7 @@ for (let [key, value] of Object.entries(obj)) {
 // console.log(themeObj);
 
 
-let scheme = new SchemeContent(Hct.fromInt(argbFromHex(`${hslToHex("224 71.4% 4.1%")}`)), true, 1);
+let scheme = new SchemeContent(Hct.fromInt(argbFromHex(`${hslToHex("224 71.4% 4.1%")}`)), false, 1);
 let theme: { [key: string]: string } = {};
 
 for (let [key, value] of Object.entries(materialColors)) {
@@ -838,6 +838,6 @@ for (let [key, value] of Object.entries(materialColors)) {
 };
 
 for (let [key, value] of Object.entries(theme)) {
-  let uiTheme = `"${key}":"${hexToHsl(value)}",`;
+  let uiTheme = `"${key}": "${hexToHsl(value)}",`;
   console.log(uiTheme);
 }

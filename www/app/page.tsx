@@ -24,7 +24,6 @@ export default function Home() {
     "border": "215 27.9% 16.9%",
     "input": "215 27.9% 16.9%",
     "ring": "216 12.2% 83.9%",
-
     "primaryPaletteKeyColor": "225 8% 48%",
     "secondaryPaletteKeyColor": "231 2% 47%",
     "tertiaryPaletteKeyColor": "278 52% 4%",
@@ -106,7 +105,60 @@ export default function Home() {
       "destructive-foreground": "210 20% 98%",
       "border": "215 27.9% 16.9%",
       "input": "215 27.9% 16.9%",
-      "ring": "216 12.2% 83.9%"
+      "ring": "216 12.2% 83.9%",
+
+
+      "primaryPaletteKeyColor": "225 8% 48%",
+      "secondaryPaletteKeyColor": "231 2% 47%",
+      "tertiaryPaletteKeyColor": "278 52% 4%",
+      "neutralPaletteKeyColor": "300 0% 46%",
+      "neutralVariantPaletteKeyColor": "231 2% 47%",
+      "onBackground": "300 1% 10%",
+      "surface": "345 40% 98%",
+      "surfaceDim": "330 1% 72%",
+      "surfaceBright": "345 40% 98%",
+      "surfaceContainerLowest": "0 0% 100%",
+      "surfaceContainerLow": "340 11% 94%",
+      "surfaceContainer": "340 5% 89%",
+      "surfaceContainerHigh": "330 2% 83%",
+      "surfaceContainerHighest": "330 1% 78%",
+      "onSurface": "0 0% 0%",
+      "surfaceVariant": "240 11% 89%",
+      "onSurfaceVariant": "0 0% 0%",
+      "inverseSurface": "300 1% 19%",
+      "inverseOnSurface": "0 0% 100%",
+      "outline": "223 7% 17%",
+      "outlineVariant": "230 4% 29%",
+      "shadow": "0 0% 0%",
+      "scrim": "0 0% 0%",
+      "surfaceTint": "224 9% 38%",
+      "onPrimary": "0 0% 100%",
+      "primaryContainer": "220 29% 12%",
+      "onPrimaryContainer": "0 0% 100%",
+      "inversePrimary": "226 21% 80%",
+      "onSecondary": "0 0% 100%",
+      "secondaryContainer": "225 5% 29%",
+      "onSecondaryContainer": "0 0% 100%",
+      "tertiary": "0 0% 0%",
+      "onTertiary": "0 0% 100%",
+      "tertiaryContainer": "282 21% 11%",
+      "onTertiaryContainer": "0 0% 100%",
+      "error": "357 100% 18%",
+      "onError": "0 0% 100%",
+      "errorContainer": "356 100% 29%",
+      "onErrorContainer": "0 0% 100%",
+      "primaryFixed": "224 12% 30%",
+      "primaryFixedDim": "220 16% 21%",
+      "onPrimaryFixed": "0 0% 100%",
+      "onPrimaryFixedVariant": "0 0% 100%",
+      "secondaryFixed": "225 5% 29%",
+      "secondaryFixedDim": "231 6% 20%",
+      "onSecondaryFixed": "0 0% 100%",
+      "onSecondaryFixedVariant": "0 0% 100%",
+      "tertiaryFixed": "284 9% 30%",
+      "tertiaryFixedDim": "283 12% 21%",
+      "onTertiaryFixed": "0 0% 100%",
+      "onTertiaryFixedVariant": "0 0% 100%",
     });
   };
 
@@ -118,9 +170,9 @@ export default function Home() {
         <Button>Slate</Button>
       </div>
 
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 gap-3">
         {theme && Object.entries(theme).map(([key, value]: [any, any]) => (
-          <p key={key} className={`flex-center bg-[hsl(var(--${key}))] text-[#00ff44] h-32 w-full border`}><strong>{key}</strong></p>
+          <p key={key} style={{ backgroundColor: `hsl(${value})` }} className={`flex-center text-[#00ff44] h-32 w-full border`}><strong>{key}</strong></p>
         ))}
       </div>
 
